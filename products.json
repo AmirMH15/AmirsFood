@@ -2,24 +2,68 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 10.99,
-      "image": "https://placehold.co/100"
+      "name": "𝓒𝓱𝓲𝓿𝓪𝓼",
+      "description": "Puma Men's Chivas Home Jersey 24/25 Red ",
+      "price": 109.99,
+      "image": "https://www.shopwss.com/cdn/shop/files/70624501_2.jpg?v=1722465676"
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "description": "Description for product 2",
-      "price": 12.99,
-      "image": "https://placehold.co/100"
+      "name": "𝓑𝓪𝔂𝓮𝓻𝓷 𝓜𝓾𝓷𝓲𝓬𝓱",
+      "description": "FC Bayern 23/24 Home Authentic Jersey",
+      "price": 119.99,
+      "image": "https://assets.adidas.com/images/w_1880,f_auto,q_auto/6623413f19604da4bb197f9fb945a372_9366/HR3729_HM12.jpg"
     },
     {
       "id": 3,
-      "name": "Product 3",
-      "description": "Description for product 3",
-      "price": 15.99,
+      "name": "𝓡𝓮𝓪𝓵 𝓜𝓪𝓭𝓻𝓲𝓭",
+      "description": "Adidas Real Madrid 24/25 Authentic Third Jersey",
+      "price": 129.99,
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7fc29944712e4e59a5bea5db8809bd98_9366/Real_Madrid_24-25_Authentic_Third_Jersey_Brown_IY1761_HM1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "𝓓𝓸𝓻𝓽𝓶𝓾𝓷𝓭",
+      "description": "Borussia Dortmund 24/25 Third Jersey Men",
+      "price": 89.99,
+      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/774964/03/mod01/fnd/EEA/fmt/png/Borussia-Dortmund-24/25-Third-Jersey-Men"
+    },
+    {
+      "id": 5,
+      "name": "𝓒𝓪𝓷𝓬𝓾𝓷",
+      "description": "Cancún FC 2024-25 Away Kit",
+      "price": 99.99,
+      "image": "https://www.cancunfc.mx/cdn/shop/files/jersey21.png?v=1721925386&width=1946"
+    },
+    {
+      "id": 6,
+      "name": "𝓛𝓪𝓽𝓲𝓷𝓪 𝓒𝓪𝓵𝓬𝓲𝓸",
+      "description": "2024-25 Latina Calcio Home Shirt",
+      "price": 76.99,
+      "image": "https://i.redd.it/italian-third-division-club-latina-calcio-have-dropped-v0-lua741t6jadd1.jpg?width=1638&format=pjpg&auto=webp&s=f4eb05e0d3ccf2ac8d41218c368ebd1597fd59fb"
+    },
+    {
+      "id": 7,
+      "name": "𝓛𝓮𝓿𝓪𝓷𝓽𝓮",
+      "description": "Levante 24-25 Third Kit",
+      "price": 19.99,
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimuUXnPtPggYpp7Sbsgh-8C0edxX4yY6fM8hQJ4R5Z7Q_dWgUak8NSiC-_4TzhwDiqTOwiz9g4LP9y2v1lWHFChQyuWvKp6j7N8AQtRhAvmgA4Tz0ERaAoar6XEt89cPjyeGc08ActGXFl08sYtSUgtenxSDlD4UMYEjP7G3uL916p9oIMtgczIAD7xbUu/s1600/levante-24-25-third-kit%20%283%29.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "description": "F.C Barcelona 2024/25",
+      "price": 20.99,
+      "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/63f8fb70-f18f-4660-b76f-6c8855debb96/FCB+M+NK+DF+JSY+SS+STAD+AW.png"
+    },
+    {
+      "id": 9,
+      "name": "Product 9",
+      "description": "Description for product 9",
+      "price": 21.99,
       "image": "https://placehold.co/100"
     }
+
+
   ]
 }
