@@ -46,22 +46,22 @@
       "id": 7,
       "name": "𝓛𝓮𝓿𝓪𝓷𝓽𝓮",
       "description": "Levante 24-25 Third Kit",
-      "price": 19.99,
+      "price": 99.99,
       "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimuUXnPtPggYpp7Sbsgh-8C0edxX4yY6fM8hQJ4R5Z7Q_dWgUak8NSiC-_4TzhwDiqTOwiz9g4LP9y2v1lWHFChQyuWvKp6j7N8AQtRhAvmgA4Tz0ERaAoar6XEt89cPjyeGc08ActGXFl08sYtSUgtenxSDlD4UMYEjP7G3uL916p9oIMtgczIAD7xbUu/s1600/levante-24-25-third-kit%20%283%29.jpg"
     },
     {
       "id": 8,
       "name": "𝓑𝓪𝓻𝓬𝓮𝓵𝓸𝓷𝓪",
       "description": "F.C Barcelona 2024/25",
-      "price": 20.99,
+      "price": 120.99,
       "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/63f8fb70-f18f-4660-b76f-6c8855debb96/FCB+M+NK+DF+JSY+SS+STAD+AW.png"
     },
     {
       "id": 9,
-      "name": "Product 9",
-      "description": "Description for product 9",
-      "price": 21.99,
-      "image": "https://placehold.co/100"
+      "name": "𝓟𝓪𝓻𝓲𝓼 𝓢𝓪𝓲𝓷𝓽-𝓖𝓮𝓻𝓶𝓪𝓲𝓷",
+      "description": "Nike Men's Paris Saint-Germain 2024/25 Away Soccer Jersey",
+      "price": 94.99,
+      "image": "https://preview.redd.it/new-away-kit-for-24-25-season-v0-5ojj30amw5ad1.jpg?width=1080&crop=smart&auto=webp&s=01e1034bad1315b6496f08aadcc831420ee37d27"
     }
 
 

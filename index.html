@@ -45,7 +45,7 @@
       <div id="cart-list">
         <!-- Cart items will be dynamically inserted here -->
  <!-- new code here -->
-
+<!-- 
 <div class="cart-item"></div>
 <h5>Product 1</h5>
 <p> $10.99 x 2</p>
@@ -61,7 +61,7 @@ data-id="1">
 data-id="1">
      Remove
      </button>
-     </div>
+     </div> -->
         <!-- Newcode finished -->
 
       </div>
@@ -179,7 +179,22 @@ data-id="${product.id}">
             
             `;
           });
-          cartList.innerHTML = cartItem;
+                      cartList.innerHTML = cartItem;
+          document.querySelectorAll('.remove-from-cart').forEach((button) => {
+            button.addEventListener('click', removeFromCart);
+          });
+      
+          
+           
+          function removeFromCart(event){
+            const productId = event.target.getAttribute('data-id');
+            const productIndex = cart.findIndex(
+              (product) => product.id == productId,
+            );
+            cart.splice(productIndex, 1);
+            renderCart();
+            console.log('Your product has been removed');
+          }
         }
       });
     </script>
