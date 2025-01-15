@@ -176,29 +176,41 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const query = new URLSearchParams(window.location.search);
-        console.log(Array.from(query.entries()));
-        const cart = Array.from(query.entries());
-        function renderCart() {
-          const cartList = document.getElementById('cart-summary');
-          let cartItem = '';
-          let totalAmount = 0;
-          for (let [key, value] of cart) {
-            console.log(key, value);
-            cartItem += `<p> ${key}${value} </p>`;
+        const urlParams = new URLSearchParams(window.location.search);
+        const cartSummary = document.getElementById('cart-summary');
+        //bgbjgrbogb
+        const ids = urlParams.getAll('id');
+        const names = urlParams.getAll('name');
+        const prices = urlParams.getAll('price');
 
-            const amount= parseFloat(value);
-            if(!isNaN(amount)){
-              totalAmount += amount
-            } else{
-              console.warn(`Invalid value for this ${key}: ${value}`);
-            }
-          }
-          cartList.innerHTML = cartItem;
+        // fkrgbkrg
+        const cartItems = [];
+        let cartItem = '';
 
-          cartList.innerHTML +=`<p><strong>Total Amount: ${totalAmount.toFixed(2)}</strong></p>`;
+        let subTotal = 0;
+        let tax = 0.15;
+        let total = 0;
+
+
+        for (let i = 0; i < ids.length; i++){
+          cartItem +=`
+          <div class= "cart-item">
+            <h5> ${names[i]}</h5>
+            <p>$${parseFloat(prices[i]).toFixed(2)}</p>
+            <input type="hidden" name= "id" value="${ids[i]}" />
+            <input type="hidden" name= "name" value="${names[i]}" />
+            <input type="hidden" name= "price" value="${prices[i]}" />
+            </div>
+          `;
+            subtotal+= parseInt(prices[i]);
         }
-        renderCart();
+        tax *= subTotal
+        total = tax+subTotal
+
+          cartSummary.innerHTML = cartItem;
+          cartSummary += `<p>Subtotal: $${parseFloat(subTotal).toFixed(2)}</p>`;
+          cartSummary += `<p>Tax (15%): $${parseFloat(tax).toFixed(2)}</p>`;
+          cartSummary += `<p>Total: $${parseFloat(total).toFixed(2)}</p>`;
       });
     </script>
   </body>
