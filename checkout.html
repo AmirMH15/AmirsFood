@@ -41,11 +41,13 @@
   </nav>
 
     <div class="container mt-5">
+      <form id="checkout-form" action="confirmation.html" method="get">
       <h1>Checkout</h1>
       <div id="cart-summary">
         <!-- Cart summary will be dynamically inserted here -->
+
       </div>
-      <form id="checkout-form">
+
         <h2>Login</h2>
         <div class="form-group">
           <label for="email"
@@ -187,9 +189,6 @@
         const cartItems = [];
         let cartItem = '';
 
-        let subTotal = 0;
-        let tax = 0.15;
-        let total = 0;
 
 
         for (let i = 0; i < ids.length; i++){
@@ -202,15 +201,26 @@
             <input type="hidden" name= "price" value="${prices[i]}" />
             </div>
           `;
-            subtotal+= parseInt(prices[i]);
         }
-        tax *= subTotal
-        total = tax+subTotal
 
           cartSummary.innerHTML = cartItem;
-          cartSummary += `<p>Subtotal: $${parseFloat(subTotal).toFixed(2)}</p>`;
-          cartSummary += `<p>Tax (15%): $${parseFloat(tax).toFixed(2)}</p>`;
-          cartSummary += `<p>Total: $${parseFloat(total).toFixed(2)}</p>`;
+
+          document
+          .querySelector('#checkout-form')
+          .addEventListener('submit', submitCart)
+
+          function submitCart(event){
+            event.preventDefualt();
+            console.log('submitted')
+            fetch('useers.json')
+            .then(response => response.json())
+            .then(data => {
+              const email = document.getElementById('email').value;
+              console.log(email);
+            const exists = data.some( user => user.email == email);
+            console.log(exists);
+            });
+          }
       });
     </script>
   </body>
