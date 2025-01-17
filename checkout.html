@@ -47,6 +47,20 @@
         <!-- Cart summary will be dynamically inserted here -->
 
       </div>
+      <!-- fgsrg -->
+
+<!-- NEW CODE: Subtotal, Tax, and Total section --> 
+ <div class="mt-4">
+   <h3>Summary</h3> 
+  <div id="cart-summary-details"> 
+    <p>Subtotal: $<span id="subtotal">0.00</span></p> 
+    <p>Tax (10%): $<span id="tax">0.00</span></p> 
+    <p>Total: $<span id="total">0.00</span></p> 
+  </div> 
+</div>
+
+
+      <!-- fnrejgnerogn -->
 
         <h2>Login</h2>
         <div class="form-group">
@@ -205,6 +219,13 @@
 
           cartSummary.innerHTML = cartItem;
 
+//gregjeorg
+          const taxRate = 0.1; 
+           const tax = subtotal * taxRate; const total = subtotal + tax; 
+           subtotalElem.textContent = subtotal.toFixed(2); 
+           taxElem.textContent = tax.toFixed(2); 
+           totalElem.textContent = total.toFixed(2);
+        // cdifjeof
           document
           .querySelector('#checkout-form')
           .addEventListener('submit', submitCart)
