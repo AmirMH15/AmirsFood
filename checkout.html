@@ -196,18 +196,24 @@
         document.querySelector('#checkout-form').addEventListener('submit', submitCart);
 
         function submitCart(event) {
-          event.preventDefault(); // Fix typo: it should be 'preventDefault()'
-          console.log('Form submitted');
-          fetch('users.json')
-            .then(response => response.json())
-            .then(data => {
-              const email = document.getElementById('email').value;
-              console.log(email);
-              const exists = data.some(user => user.email === email);
-              console.log(exists);
-            });
+          event.preventDefault(); // Prevent the default form submission
+
+          // Validate or handle other necessary checks here
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+
+          if (email && password) {
+            console.log('Form submitted');
+            // Now redirect to the confirmation page
+            window.location.href = 'confirmation.html'; // Redirect to confirmation page
+          } else {
+            console.log('Please fill in all required fields.');
+            // Optionally show an error message if fields are incomplete
+            document.getElementById('error-message').innerHTML = "Please complete all required fields!";
+          }
         }
       });
     </script>
   </body>
 </html>
+

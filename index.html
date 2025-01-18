@@ -41,7 +41,7 @@
     </nav>
 
     <div class="container mt-5">
-      <form action="checkout.html" method="get">
+      <form id="checkout-form" action="checkout.html" method="get">
         <h2>Cart</h2>
         <div id="cart-list"></div>
         <button class="btn btn-primary" id="checkout-button" type="submit">
@@ -95,16 +95,16 @@
             data.products.forEach((product) => {
               console.log(product.name);
               productHTML += `<div class="col-md-4">
-          <div class="card mb-4">
-              <img src=${product.image} class="card-img-top" alt="Product 1">
-              <div class="card-body">
-                  <h5 class="card-title">${product.name}</h5>
-                  <p class="card-text">${product.price}</p>
-                  <p class="card-text">${product.description}</p>
-                  <button class="btn btn-primary add-to-cart" data-id=${product.id}>Add to Cart</button>
-              </div>
-          </div>
-      </div>`;
+                <div class="card mb-4">
+                  <img src=${product.image} class="card-img-top" alt="Product 1">
+                  <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text">${product.price}</p>
+                    <p class="card-text">${product.description}</p>
+                    <button class="btn btn-primary add-to-cart" data-id=${product.id}>Add to Cart</button>
+                  </div>
+                </div>
+              </div>`;
             });
             productList.innerHTML = productHTML;
             document.querySelectorAll(".add-to-cart").forEach((button) => {
@@ -112,7 +112,6 @@
             });
           });
 
-        //code update
         const cart = [];
 
         // add cart product
@@ -136,16 +135,16 @@
           let cartItem = "";
           cart.forEach((product) => {
             cartItem += `
-           <div class="cart-item">
-          <h5>${product.name}</h5>
-          <p> $${product.price} x 1</p>
-          <input type="hidden" name= "id" value="${product.id}"/>
-         <input type ="hidden" name="name" value="${product.name}"/>
-         <input type="hidden" name="price" value="${product.price}" />
-        <button class ="btn btn-danger remove-from-cart" data-id="${product.id}">
-          Remove
-        </button>
-      </div>`;
+              <div class="cart-item">
+                <h5>${product.name}</h5>
+                <p> $${product.price} x 1</p>
+                <input type="hidden" name="id" value="${product.id}"/>
+                <input type="hidden" name="name" value="${product.name}"/>
+                <input type="hidden" name="price" value="${product.price}" />
+                <button class="btn btn-danger remove-from-cart" data-id="${product.id}">
+                  Remove
+                </button>
+              </div>`;
           });
           cartList.innerHTML = cartItem;
           document.querySelectorAll(".remove-from-cart").forEach((button) => {
@@ -162,6 +161,11 @@
             console.log("Your product has been removed");
           }
         }
+
+        // Save cart data in localStorage when submitting the form
+        document.querySelector("#checkout-form").addEventListener("submit", function(event) {
+          localStorage.setItem("cart", JSON.stringify(cart)); // Save cart to localStorage
+        });
       });
     </script>
   </body>
